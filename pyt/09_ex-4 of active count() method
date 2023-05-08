@@ -1,0 +1,88 @@
+#ex-4
+from threading import*
+import time
+
+'''
+print('Example-4')
+def fun1():
+    time.sleep(6)
+    print('I am fun1')
+
+def fun2():
+    time.sleep(5)
+    print('I am fun2')
+    
+t1=Thread(target=fun1)
+t2=Thread(target=fun2)
+
+t1.start()
+t2.start()
+time.sleep(3)
+print('number of active threads:',active_count())
+
+output:
+number of active threads: 3
+I am fun2
+I am fun1
+
+
+print('Example-5')
+
+def fun1():
+    print('start-fun1')
+    time.sleep(2)
+    print('stop-fun1')
+
+def fun2():
+    print('start-fun2')
+    time.sleep(2)
+    print('stop-fun2')
+    
+t1=Thread(target=fun1)
+t2=Thread(target=fun2)
+
+t1.start()
+t2.start()
+
+print('number of active threads:',active_count())
+
+output:
+Example-5
+start-fun1
+start-fun2
+number of active threads: 3
+stop-fun1
+stop-fun2
+
+'''
+
+print('Example-6')
+
+def fun1():
+    print('start-fun1')
+    time.sleep(2)
+    print('stop-fun1')
+
+def fun2():
+    print('start-fun2')
+    time.sleep(2)
+    print('stop-fun2')
+    
+t1=Thread(target=fun1)
+t2=Thread(target=fun2)
+
+t1.start()
+t2.start()
+
+print('number of active threads:',active_count())
+time.sleep(5)
+print('number of active threads:',active_count())
+
+# output:
+    
+# start-fun1
+# start-fun2
+# number of active threads: 3
+# stop-fun2
+# stop-fun1
+# number of active threads: 1
