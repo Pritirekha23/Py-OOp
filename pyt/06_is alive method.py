@@ -1,5 +1,3 @@
-#ex-2
-
 from threading import*
 import time
 def fun1():
@@ -17,3 +15,12 @@ t1.start()
 t2.start()
 print('After starting t1 thread :',t1.is_alive())
 print('After starting t2 thread :',t2.is_alive())
+
+
+# output:
+# Before starting t1 thread : False
+# Before starting t2 thread : False
+# Jin
+# After starting t1 thread : True
+# After starting t2 thread : False
+# Jimin
